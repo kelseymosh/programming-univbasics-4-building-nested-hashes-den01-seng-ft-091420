@@ -104,7 +104,7 @@ describe "We can create complex, nested Hashes by implementing four methods:" do
       end
       describe "the hash assigned to :shortline_railroad includes" do
         it "a :mortgage_value key set to 800" do
-          expect(monopoly_with_fourth_tier[:railroads][:names][:shortline_railroad][:mortgage_value]).to eq(nil)
+          expect(monopoly_with_fourth_tier[:railroads][:names][:shortline_railroad][:mortgage_value]).to eq(800)
         end
       end
     end
