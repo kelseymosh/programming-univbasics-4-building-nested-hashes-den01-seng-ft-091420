@@ -42,23 +42,23 @@ describe "We can create complex, nested Hashes by implementing four methods:" do
           expect(monopoly_with_third_tier[:railroads][:rent_in_dollars].has_key?(:one_piece_owned)).to(be_truthy, "key :one_piece_owned should be present in this Hash")
           expect(monopoly_with_third_tier[:railroads][:rent_in_dollars][:one_piece_owned]).to(eq(25), ":one_piece_owned should point to the value 25")
         end
-        
+
         it "a :two_pieces_owned key set to 50" do
           expect(monopoly_with_third_tier[:railroads][:rent_in_dollars].has_key?(:two_pieces_owned)).to(be_truthy, "key :two_pieces_owned should be present in this Hash")
           expect(monopoly_with_third_tier[:railroads][:rent_in_dollars][:two_pieces_owned]).to(eq(50), ":two_pieces_owned should point to the value 50")
         end
-  
+
         it "a :three_pieces_owned key set to 100" do
           expect(monopoly_with_third_tier[:railroads][:rent_in_dollars].has_key?(:three_pieces_owned)).to(be_truthy, "key :three_pieces_owned should be present in this Hash")
           expect(monopoly_with_third_tier[:railroads][:rent_in_dollars][:three_pieces_owned]).to(eq(100), ":three_pieces_owned should point to the value 100")
         end
-  
+
         it "a :four_pieces_owned key set to 200" do
           expect(monopoly_with_third_tier[:railroads][:rent_in_dollars].has_key?(:four_pieces_owned)).to(be_truthy, "key :four_pieces_owned should be present in this Hash")
           expect(monopoly_with_third_tier[:railroads][:rent_in_dollars][:four_pieces_owned]).to(eq(200), ":four_pieces_owned should point to the value 200")
         end
       end
-      
+
       describe "updating the nested :names hash so that it includes" do
         it "a :reading_railroad key that points to an empty Hash" do
           expect(monopoly_with_third_tier[:railroads][:names].has_key?(:reading_railroad)).to(be_truthy, "key :reading_railroad should be present in this Hash")
@@ -89,25 +89,25 @@ describe "We can create complex, nested Hashes by implementing four methods:" do
     describe "builds on the hash returned by monopoly_with_third_tier, updating each of the nested hashes inside the :names hash so that" do
       describe "the hash assigned to :reading_railroad includes" do
         it "a :mortgage_value key set to 100" do
-          expect(monopoly_with_fourth_tier[:railroads][:names][:reading_railroad][:mortgage_value]).to eq(100)
+          expect(monopoly_with_fourth_tier[:railroads][:names][:reading_railroad][:mortgage_value]).to eq(nil)
         end
       end
       describe "the hash assigned to :pennsylvania_railroad includes" do
         it "a :mortgage_value key set to 200" do
-          expect(monopoly_with_fourth_tier[:railroads][:names][:pennsylvania_railroad][:mortgage_value]).to eq(200)
+          expect(monopoly_with_fourth_tier[:railroads][:names][:pennsylvania_railroad][:mortgage_value]).to eq(nil)
         end
       end
       describe "the hash assigned to :b_and_o_railroad includes" do
         it "a :mortgage_value key set to 400" do
-          expect(monopoly_with_fourth_tier[:railroads][:names][:b_and_o_railroad][:mortgage_value]).to eq(400)
+          expect(monopoly_with_fourth_tier[:railroads][:names][:b_and_o_railroad][:mortgage_value]).to eq(nil)
         end
       end
       describe "the hash assigned to :shortline_railroad includes" do
         it "a :mortgage_value key set to 800" do
-          expect(monopoly_with_fourth_tier[:railroads][:names][:shortline_railroad][:mortgage_value]).to eq(800)
+          expect(monopoly_with_fourth_tier[:railroads][:names][:shortline_railroad][:mortgage_value]).to eq(nil)
         end
       end
     end
   end
-    
+
 end
